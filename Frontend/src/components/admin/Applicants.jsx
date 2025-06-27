@@ -19,7 +19,7 @@ const Applicants = () => {
           `${APPLICANT_API_END_POINT}/applicants/${param.id}`,
           { withCredentials: true }
         );
-        console.log();
+       
         if (res.data.success) {
           despatch(setApplicants(res.data.Job));
         }

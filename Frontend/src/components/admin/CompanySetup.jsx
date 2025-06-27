@@ -61,7 +61,7 @@ const CompanySetup = () => {
         toast.success(res.data.message);
         navegate("/admin/companies/");
 
-        console.log(res.data?.company);
+        
       }
     } catch (error) {
       console.log(error);

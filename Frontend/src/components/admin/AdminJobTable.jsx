@@ -19,7 +19,7 @@ const AdminJobTable = () => {
   const { alladminjobs = [], searchJobByText } = useSelector(
     (store) => store.job
   );
-  console.log("table ", alladminjobs);
+  
   const [filterjob, setFilterjob] = useState(alladminjobs);
   useEffect(() => {
     if (alladminjobs.length > 0) {

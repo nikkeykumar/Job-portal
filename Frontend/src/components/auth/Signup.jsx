@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navebar from "../shared/Navebar";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { RadioGroup } from "@/components/ui/radio-group";
 import { Button } from "../ui/button";
-import { useState } from "react";
+
 import axios from "axios";
 import { USER_API_END_POINT } from "../../../utils/constant.js";
 import { useNavigate } from "react-router-dom";
@@ -66,7 +66,7 @@ const Signup = () => {
     if (user) {
       navigate("/");
     }
-  });
+  }, []);
 
   return (
     <>

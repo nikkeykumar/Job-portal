@@ -19,7 +19,7 @@ const Jobdescription = () => {
       (application) => application.applicant === user?._id
     ) || false;
   const [isApplide, setIsApplide] = useState(isIntiallyApplide);
-  console.log(isApplide);
+ 
   const params = useParams();
   const jobId = params.id;
   const dispatch = useDispatch();
@@ -49,7 +49,7 @@ const Jobdescription = () => {
         const res = await axios.get(`${JOB_API_END_POINT}/get/${jobId}`, {
           withCredentials: true,
         });
-        console.log(res);
+      
         if (res.data.success) {
           dispatch(setsingljob(res.data.jobdata));
           setIsApplide(
@@ -64,8 +64,7 @@ const Jobdescription = () => {
     };
     fetchSinglejob();
   }, [jobId, dispatch, user?._id]);
-  console.log(isApplide);
-  console.log("djksdkaldfl", singljob);
+
 
   return (
     <div className="max-w-5xl mx-auto my-10">

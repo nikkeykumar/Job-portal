@@ -5,10 +5,11 @@ import { Button } from "./ui/button";
 import { Contact, Mail, Pen } from "lucide-react";
 import { Badge } from "./ui/badge";
 import { Label } from "@/components/ui/label";
-import ApplideJobTable from "./applideJobTable.jsx";
+
 import UpdateProfileDialog from "./UpdateProfileDialog.jsx";
 import { useSelector } from "react-redux";
 import useGetAplideJobs from "./hooks/useGetAplideJobs.jsx";
+import ApplideJobTable from "./ApplideJobTable.jsx";
 
 const Profile = () => {
   useGetAplideJobs();
@@ -83,7 +84,7 @@ const Profile = () => {
         </div>
       </div>
       <div className="max-w-4xl mx-auto rounded-2xl bg-white ">
-        <h1 className="font-bold text-lg my-5">Applid Jobs</h1>
+        <h1 className="font-bold text-lg my-5">Applied Jobs</h1>
         <ApplideJobTable />
       </div>
       <div>

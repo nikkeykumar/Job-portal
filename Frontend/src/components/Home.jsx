@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 const Home = () => {
   const { user } = useSelector((store) => store.auth);
-  console.log("home vale", user);
+ 
   useGetAllJobs();
   const navigate = useNavigate();
   useEffect(() => {

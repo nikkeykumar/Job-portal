@@ -13,7 +13,7 @@ const useGetAplideJobs = () => {
           withCredentials: true,
         });
         if (res.data.success) {
-            console.log(res.data.applicant);
+           
           dispatch(setAllaplidejobs(res.data.applicant));
         }
       } catch (error) {

@@ -14,7 +14,7 @@ const useGetAllAdminJobs = () => {
         if (res.data.success) {
           dispatch(setAlladminjobs(res.data.jobs));
         }
-        console.log("dfnlaskfjl",)
+        
       } catch (error) {
         console.log(error);
       }

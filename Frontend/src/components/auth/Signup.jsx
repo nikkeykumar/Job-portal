@@ -4,13 +4,13 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { RadioGroup } from "@/components/ui/radio-group";
 import { Button } from "../ui/button";
-
 import axios from "axios";
 import { USER_API_END_POINT } from "../../../utils/constant.js";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { Loader2 } from "lucide-react";
 import { setLoading } from "../../../redux/authSlice.js";
+import { toast } from "sonner";
 const Signup = () => {
   const [input, setinput] = useState({
     FullName: "",
@@ -66,8 +66,7 @@ const Signup = () => {
     if (user) {
       navigate("/");
     }
-  }, []);
-
+  }, [user, navigate]);
   return (
     <>
       <div>
@@ -178,3 +177,4 @@ const Signup = () => {
 };
 
 export default Signup;
+

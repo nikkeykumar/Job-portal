@@ -4,7 +4,10 @@ dotenv.config();
 
 const connectionDB = async () => {
   try {
-    await mongoose.connect("mongodb://localhost:27017/job_portal");
+    await mongoose.connect(process.env.MONGO_URL, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
     console.log("MongoDB connected successfully!");
   } catch (error) {
     console.error("error to connecting mongodb ", error.message);

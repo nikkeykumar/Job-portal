@@ -18,11 +18,6 @@ const Home = () => {
       navigate("/admin/companies");
     }
   }, [user, navigate]);
-  useEffect(() => {
-    if (!user || user.role !== "Recruiter") {
-      navigate("/"); // Only redirect if not a recruiter
-    }
-  }, [user, navigate]);
   return (
     <>
       <div>

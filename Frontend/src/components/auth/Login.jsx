@@ -36,15 +36,15 @@ const Login = () => {
       });
 
       if (res.data.success) {
-        // Dispatch the user object instead of success boolean
-        dispatch(setUser(res.data.userData)); // Ensure the backend returns `user` in the response
+       
+        dispatch(setUser(res.data.userData)); 
         navegate("/");
         toast.success(res.data.message);
       }
     } catch (error) {
       toast.error(error.response?.data?.message || "Something went wrong!");
       console.log(error);
-    } finally {
+    } finally { 
       dispatch(setLoading(false));
     }
   };

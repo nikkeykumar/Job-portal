@@ -14,7 +14,13 @@ const Home = () => {
   const navigate = useNavigate();
   useEffect(() => {
     if (user?.role === "Recruiter") {
+      console.log("Redirecting to /admin/companies");
       navigate("/admin/companies");
+    }
+  }, [user, navigate]);
+  useEffect(() => {
+    if (!user || user.role !== "Recruiter") {
+      navigate("/"); // Only redirect if not a recruiter
     }
   }, [user, navigate]);
   return (

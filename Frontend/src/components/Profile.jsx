@@ -16,7 +16,6 @@ const Profile = () => {
   const isResume = true;
   const [open, setOpen] = useState(false);
   const { user } = useSelector((Store) => Store.auth);
-  console.log(user);
   return (
     <div>
       <Navebar />

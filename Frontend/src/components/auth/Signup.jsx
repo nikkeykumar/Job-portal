@@ -62,11 +62,7 @@ const Signup = () => {
       dispatch(setLoading(false));
     }
   };
-  useEffect(() => {
-    if (user) {
-      navigate("/");
-    }
-  }, [user, navigate]);
+
   return (
     <>
       <div>

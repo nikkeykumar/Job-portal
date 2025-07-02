@@ -48,11 +48,6 @@ const Login = () => {
       dispatch(setLoading(false));
     }
   };
-  useEffect(() => {
-    if (user) {
-      navegate("/");
-    }
-  });
   return (
     <div>
       <Navebar />

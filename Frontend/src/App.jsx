@@ -57,7 +57,7 @@ const router = createBrowserRouter([
     path: "/admin/company/create",
     element: (
       <ProtecedRoute>
-        {" "}
+       
         <CompanyCreate />
       </ProtecedRoute>
     ),

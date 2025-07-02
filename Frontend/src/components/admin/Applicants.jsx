@@ -19,7 +19,7 @@ const Applicants = () => {
           `${APPLICANT_API_END_POINT}/applicants/${param.id}`,
           { withCredentials: true }
         );
-       
+
         if (res.data.success) {
           despatch(setApplicants(res.data.Job));
         }
@@ -34,8 +34,7 @@ const Applicants = () => {
       <Navebar />
       <div className="max-w-5xl mx-auto">
         <h1 className="font-bold text-xl my-5">
-          {" "}
-          Applicants({applicants.application.length}){" "}
+          Applicants({applicants?.application?.length || 0})
         </h1>
         <ApplicantsTable />
       </div>

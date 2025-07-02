@@ -47,7 +47,7 @@ const router = createBrowserRouter([
   // Admin ka leya
   {
     path: "/admin/companies",
-    element: <Companies />,
+    element:  <Companies />,
   },
   {
     path: "/admin/company/create",
